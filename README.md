@@ -26,7 +26,7 @@ python -mpip install matplotlib
 
 
 # Usage Example
-```python
+```
 python opd100_loader.py --ip 192.168.0.34 --tcp-port 80 --device-port 4
 ```
 
