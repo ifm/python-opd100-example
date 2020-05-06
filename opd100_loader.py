@@ -301,7 +301,7 @@ class ProfileLoader:
             self.buildPDout()
             return NextState.MODIFY_DEVICE
 
-        iolink.buildPDout()
+        self.buildPDout()
         return NextState.WAIT
 
 
@@ -340,7 +340,7 @@ if __name__ == "__main__":
                         help="IP address of the ifm ethernet master.")
     parser.add_argument("--tcp-port", default=MASTER_TCP_PORT,
                         help="TCP port of the ifm ethernet master.")
-    parser.add_argument("--device-port", default=MASTER_TCP_PORT,
+    parser.add_argument("--device-port", default=MASTER_DEVICE_PORT,
                         help="Physical port, the OPD100 is connected to.")
     args = parser.parse_args()
     if ("{}".format(args.ip) != ""):
